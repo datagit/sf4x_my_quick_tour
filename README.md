@@ -4,6 +4,8 @@ my demo fs4x
 - http://symfony.com/doc/current/quick_tour/the_big_picture.html
 - https://symfony.com/doc/current/setup/flex.html
 - https://symfony.com/doc/current/contributing/index.html
+- https://symfony.com/blog/symfony-4-a-new-way-to-develop-applications
+- https://api-platform.com/
 ```bash
 $ composer create-project symfony/skeleton quick_tour
 $ cp -R quick_tour/{.[!.],}* sf4x_my_quick_tour/
@@ -18,4 +20,8 @@ $ composer require twig
 $ composer require 
 #install package api
 $ composer require api
+#udpate pdo_sqlite
+$ mkdir var/data
+$ php bin/console doctrine:database:create
+$ php bin/console doctrine:schema:create
 ```

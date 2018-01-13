@@ -8,8 +8,14 @@ parameters:
 doctrine:
     dbal:
         # configure these for your database server
-        driver: 'pdo_mysql'
-        server_version: '5.7'
+        #st for mysql
+        #driver: 'pdo_mysql'
+        #server_version: '5.7'
+        #ed for mysql
+        #st for sqlite
+        driver: 'pdo_sqlite'
+        server_version: '3.15'
+        #ed for sqlite
         charset: utf8mb4
 
         # With Symfony 3.3, remove the `resolve:` prefix
