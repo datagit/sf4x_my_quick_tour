@@ -1,7 +1,9 @@
 # sf4x_my_quick_tour
 my demo fs4x
 #### Init Project
-    http://symfony.com/doc/current/quick_tour/the_big_picture.html
+- http://symfony.com/doc/current/quick_tour/the_big_picture.html
+- https://symfony.com/doc/current/setup/flex.html
+- https://symfony.com/doc/current/contributing/index.html
 ```bash
 $ composer create-project symfony/skeleton quick_tour
 $ cp -R quick_tour/{.[!.],}* sf4x_my_quick_tour/
@@ -13,5 +15,7 @@ $ composer require annotations
 #install package template twig
 $ composer require twig
 #install package profiler
-$ composer require profiler
+$ composer require 
+#install package api
+$ composer require api
 ```
