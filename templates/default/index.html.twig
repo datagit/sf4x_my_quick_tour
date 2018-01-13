@@ -4,4 +4,6 @@
 {% block body %}
     <h1>Hello {{ name }}</h1>
     <h3>call service GreetingGenerator: {{ greeting }}</h3>
+    {# Will print something like "Hey Symfony!" #}
+    <h1>{{ name|greet }}</h1>
 {% endblock %}
