@@ -6,6 +6,7 @@ my demo fs4x
 - https://symfony.com/doc/current/contributing/index.html
 - https://symfony.com/blog/symfony-4-a-new-way-to-develop-applications
 - https://api-platform.com/
+- https://www.getpostman.com/
 ```bash
 $ composer create-project symfony/skeleton quick_tour
 $ cp -R quick_tour/{.[!.],}* sf4x_my_quick_tour/
@@ -24,4 +25,6 @@ $ composer require api
 $ mkdir var/data
 $ php bin/console doctrine:database:create
 $ php bin/console doctrine:schema:create
+#add package logger
+$ composer require logger
 ```
