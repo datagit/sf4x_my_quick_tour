@@ -11,6 +11,7 @@ my demo fs4x
 - https://api-platform.com/docs/distribution
 - http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html
 - http://symfony.com/doc/current/reference/constraints.html
+- (Symfony 4 best practices) https://github.com/symfony/demo/tree/master/src/Entity
 ```bash
 $ composer create-project symfony/skeleton quick_tour
 $ cp -R quick_tour/{.[!.],}* sf4x_my_quick_tour/

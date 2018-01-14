@@ -2,18 +2,20 @@
 // src/Entity/Product.php
 namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * A Product
+ * A Category
  * @ORM\Entity()
  * @ApiResource()
  */
-class Product
+class Category
 {
     /**
-     * @var int The id of this product.
+     * @var int The id of this category.
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
@@ -22,7 +24,7 @@ class Product
     private $id;
 
     /**
-     * @var string the name of the product.
+     * @var string the name of the category.
      * @ORM\Column(type="string")
      * @Assert\NotBlank
      *
@@ -30,17 +32,11 @@ class Product
     private $name;
 
     /**
-     * @var string the price of product
-     * @ORM\Column(type="decimal")
+     * @var Product[]|ArrayCollection
      *
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
      */
-    private $price;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Category", inversedBy="products")
-     *
-     */
-    private $category;
+    private $products;
 
     /**
      * @return int
@@ -74,40 +70,23 @@ class Product
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
-    public function getPrice(): string
+    public function getProducts(): Collection
     {
-        return $this->price;
+        return $this->products;
     }
 
     /**
-     * @param string $price
+     * @param Product[] $products
      */
-    public function setPrice(string $price): void
+    public function setProducts(array $products): void
     {
-        $this->price = $price;
-    }
-
-    /**
-     * @return Category
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
-     * @param Category $category
-     */
-    public function setCategory(Category $category): void
-    {
-        $this->category = $category;
+        $this->products = $products;
     }
 
 
-
-
+    public function __construct()
+    {
+        $this->products = new ArrayCollection();
+    }
 
 }
