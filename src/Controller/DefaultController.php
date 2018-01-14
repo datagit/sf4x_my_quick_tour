@@ -53,4 +53,21 @@ class DefaultController extends AbstractController
         ]
         );
     }
+
+    //product_special
+
+    /**
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\JsonResponse
+     * @Route("/api/product/{id}/special", name="product_special")
+     */
+    public function apiGetProductSpecial($id) {
+        //https://api-platform.com/docs/core/operations#creating-custom-operations-and-controllers
+        return $this->json(
+            [
+                'id'      => $id,
+                'symfony'   => 'apiGetProductSpecial',
+            ]
+        );
+    }
 }

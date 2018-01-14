@@ -12,6 +12,8 @@ my demo fs4x
 - http://docs.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/types.html
 - http://symfony.com/doc/current/reference/constraints.html
 - (Symfony 4 best practices) https://github.com/symfony/demo/tree/master/src/Entity
+- (add custom api) https://api-platform.com/docs/core/operations#creating-custom-operations-and-controllers
+- (apply filters: Doctrine ORM Filters) https://api-platform.com/docs/core/filters
 ```bash
 $ composer create-project symfony/skeleton quick_tour
 $ cp -R quick_tour/{.[!.],}* sf4x_my_quick_tour/

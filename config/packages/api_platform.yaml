@@ -1,3 +1,17 @@
 api_platform:
     mapping:
         paths: ['%kernel.project_dir%/src/Entity']
+    # The title of the API.
+    title: 'My-Api-Platform'
+
+    # The description of the API.
+    description: 'https://api-platform.com/docs/core'
+
+    # The version of the API.
+    version: '0.0.1'
+#(apply filters: Doctrine ORM Filters) https://api-platform.com/docs/core/filters
+services:
+    product.search_filter:
+        parent: 'api_platform.doctrine.orm.search_filter'
+        arguments: [ { id: 'exact', price: 'exact', name: 'partial' } ]
+        tags: [ 'api_platform.filter' ]

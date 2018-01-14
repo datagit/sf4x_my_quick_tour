@@ -8,7 +8,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * A Product
  * @ORM\Entity()
- * @ApiResource()
+ * @ApiResource(itemOperations={
+ *     "get"={"method"="GET"},
+ *     "special"={"route_name"="product_special"}
+ * }, attributes={"filters"={"product.search_filter"}}
+ *     )
+ *
  */
 class Product
 {
